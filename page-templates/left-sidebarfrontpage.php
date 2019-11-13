@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name:  Front Page Layout
+ * Template Name: Left Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -36,29 +36,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                     <!-- フロントページ用ウィジェットエリア追加 -->
                     <?php if(is_active_sidebar('widget_id001')) : ?>
-                    <div class="container-fluid m-0 p-0 front_widget_area">
-                        <div class="row m-0 p-0">
-                            <aside>
-                            <?php if(is_active_sidebar('widget_id001')) : ?>
-                                <?php if(is_active_sidebar('widget_id002')) : ?>
-                                    <div class="col-sm-6 col-12">
-                                <?php else: ?>
-                                    <div class="col-12">
-                                <?php endif; ?>
-                                    <ul id="front_widget_content">
-                                        <?php dynamic_sidebar('widget_id001'); ?>
-                                    </ul>
-                                </div>
-                            <?php endif; ?>
+                    <div class="row">
+                        <aside>
+                        <?php if(is_active_sidebar('widget_id001')) : ?>
                             <?php if(is_active_sidebar('widget_id002')) : ?>
                                 <div class="col-sm-6 col-12">
-                                    <ul id="front_widget_content">
-                                        <?php dynamic_sidebar('widget_id002'); ?>
-                                    </ul>
-                                </div>
+                            <?php else: ?>
+                                <div class="col-12">
                             <?php endif; ?>
-                            </aside>
-                        </div>
+                                <ul id="front_widget">
+                                    <?php dynamic_sidebar('widget_id001'); ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                        <?php if(is_active_sidebar('widget_id002')) : ?>
+                            <div class="col-sm-6 col-12">
+                                <ul id="front_widget">
+                                    <?php dynamic_sidebar('widget_id002'); ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                        </aside>
                     </div>
                     <?php endif; ?>
                     <!-- ここまで　フロントページ用ウィジェット -->
