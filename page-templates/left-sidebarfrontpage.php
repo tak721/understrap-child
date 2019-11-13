@@ -38,7 +38,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <?php if(is_active_sidebar('widget_id001')) : ?>
                     <div class="container-fluid m-0 p-0 front_widget_area">
                         <div class="row m-0 p-0">
-                            <aside>
                             <?php if(is_active_sidebar('widget_id001')) : ?>
                                 <?php if(is_active_sidebar('widget_id002')) : ?>
                                     <div class="col-sm-6 col-12">
@@ -57,7 +56,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     </ul>
                                 </div>
                             <?php endif; ?>
-                            </aside>
                         </div>
                     </div>
                     <?php endif; ?>
