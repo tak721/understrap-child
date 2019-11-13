@@ -63,3 +63,20 @@ add_filter( 'widget_text', function( $ret ) {
 
 	return $ret;
 }, 99 );
+
+add_action(
+	'widgets_init', 
+	function(){
+		register_sidebar(array(
+			'id' => 'widget_id001',
+			'name' => 'フロントページ1',
+			'description' => 'フロントページ、メインコンテンツ下部のウィジェットエリアです',
+		));
+		
+		register_sidebar(array(
+			'id' => 'widget_id002',
+			'name' => 'フロントページ2',
+			'description' => 'ロントページ、メインコンテンツ下部のウィジェットエリアです',
+		));
+	}
+);
