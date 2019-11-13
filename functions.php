@@ -31,3 +31,35 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+add_filter( 'widget_text', function( $ret ) {
+	$php_file = 'widget_news';
+
+	if( strpos( $ret, '[' . $php_file . ']' ) !== false ) {
+		add_shortcode( $php_file, function() use ( $php_file ) {
+			get_template_part( $php_file );
+		});
+
+		ob_start();
+		do_shortcode( '[' . $php_file . ']' );
+		$ret = ob_get_clean();
+	}
+
+	return $ret;
+}, 99 );
+
+add_filter( 'widget_text', function( $ret ) {
+	$php_file = 'widget_event';
+
+	if( strpos( $ret, '[' . $php_file . ']' ) !== false ) {
+		add_shortcode( $php_file, function() use ( $php_file ) {
+			get_template_part( $php_file );
+		});
+
+		ob_start();
+		do_shortcode( '[' . $php_file . ']' );
+		$ret = ob_get_clean();
+	}
+
+	return $ret;
+}, 99 );
