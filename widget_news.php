@@ -9,7 +9,7 @@ $tmp_post = $post;
 <ul>
 <?php
 $get_posts_args = array(
-	'category__in' => array( 3, 6 ),  // 表示カテゴリー変更時はここのIDを変更
+	'category__in' => array( 1,25, 3, 6 ),  // 表示カテゴリー変更時はここのIDを変更
 	'numberposts' => 5,
 	'order' => 'DESC',
 	'orderby' => 'date'

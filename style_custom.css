@@ -1,0 +1,290 @@
+/*
+ Theme Name:   UnderStrap Child
+ Theme URI:    https://www.understrap.com
+ Description:  UnderStrap Child Theme
+ Author:       Holger Koenemann
+ Author URI:   http://www.holgerkoenemann.de
+ Template:     understrap
+ Version:      0.5.5
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  understrap-child
+ Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+ GitHub Theme URI: holger1411/understrap-child
+*/
+
+/* テーマカラーサンプル */
+tetete{
+    color:#151B59;
+    color:#3CADF2;
+    color:#A2D4F2;
+    color:#DCEAF2;
+    color:#15A637;
+}
+
+/* リセットCSS */
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1.5rem;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;  
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+
+/* 全体設定 */
+.bg-primary {
+    background-color: #A2D4F2 !important;
+}
+div.widget-area ul,
+div.textwidget li,
+li.widget {
+    list-style-type: none !important;
+}
+li {
+    list-style-position: inside;
+}
+a {
+    color: #151B59;
+}
+
+.navbar-brand-center {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align:center;
+    margin: auto;
+}
+
+footer.entry-footer {
+    display: none;
+}
+
+span.jp-relatedposts-post-date,
+span.jp-relatedposts-post-context {
+    display: none !important;
+}
+.post-navigation {
+    background-color: lawngreen;
+}
+
+/* フロントページウィジェットエリア */
+.front_widget_area ul,
+.front_widget_video_area ul {
+    margin: 0px;
+    padding: 0px;
+}
+.front_widget_area .textwidget li{
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+/* メニュー */
+.navbar-brand {
+    margin-right: 0px;
+}
+h3.widget-title ul {
+    padding-left: -40px;
+    padding-left: 1rem;
+}
+h3.widget-title,
+h2.widgettitle {
+	font-size: 1rem;
+	line-height: 2;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #404040;
+	/** ウィジェットタイトル色変更 **/
+	background:#DCEAF2;
+	background: -moz-linear-gradient(left, #DCEAF2, #A2D4F2);
+	background: -webkit-gradient(linear, left top, right top, from(#DCEAF2), to(#A2D4F2));
+	border-radius: 10px 10px 0px 0px;
+	padding: 0px 0px 0px 5px;
+}
+.widget {
+/*	margin: 24px 0 0;
+    margin: 1.714285714rem 0 0;*/
+    /* margin: 12px 0 0; */
+    margin: 0.857142758rem 0 0;
+    background-color: #f6faff;
+    border-radius: 10px;
+}
+
+iframe.youtube-player {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1.entry-title,
+h1.page-title {
+    border-top-color: #3CADF2;
+    border-top: 2px solid #3CADF2;
+    border-bottom: 1px solid #efefef;
+    background-color: #f9f9f9;
+    padding: 0.2rem 1rem 0.2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    line-height: 2em;
+    margin-bottom: 1em;
+}
+
+div.entry-meta {
+    display: none;
+}
+
+div.entry-content {
+    line-height: 2;
+}
+p {
+    margin-bottom: 1.2rem;
+}
+div.entry-content strong {
+    line-height: 2.5;
+    font-size: 1.2em;
+    border-bottom-color: #3CADF2;
+    border-bottom: 1px solid #3CADF2;
+}
+
+.articles-content,
+.articles-header {
+    font-family: 'Noto Serif JP', serif;
+}
+
+.articles-content h1,
+.articles-header h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+}
+
+.articles-content h2{
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+article.post header.entry-header {
+    font-size: 1.5rem !important;
+    margin: 0.2rem;
+    margin-top: 2.5rem;
+    border-bottom-color: #3CADF2;
+    border-bottom: 1px solid #3CADF2;
+}
+
+.page-item.active .page-link{
+    background-color: #3CADF2;
+    border-color: #3CADF2;
+}
+
+.page-link {
+    color: #3CADF2;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #151B59;
+    border-color: #151B59;
+}
+
+h3.voice {
+    font-size: 1.5rem;
+
+}
